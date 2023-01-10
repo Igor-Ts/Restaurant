@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08ca9bb3-09b9-4478-b093-99cebd50fbed" name="Changes" comment="Added main classes and simple dish menu. Added task 2.">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Restaurant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Tablet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kitchen/Dish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kitchen/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ConsoleHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Restaurant.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Restaurant.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Task.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Task.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Tablet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Tablet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kitchen/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kitchen/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +17,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="package-info" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -86,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673198491205</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added main classes and simple dish menu. Added task 2.">
+      <created>1673369856323</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673369856323</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
