@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08ca9bb3-09b9-4478-b093-99cebd50fbed" name="Changes" comment="Added main classes and simple dish menu. Added task 2.">
-      <change afterPath="$PROJECT_DIR$/src/main/ConsoleHelper.java" afterDir="false" />
+    <list default="true" id="08ca9bb3-09b9-4478-b093-99cebd50fbed" name="Changes" comment="Finished task 2. Added console &quot;UI&quot;. Added task 3.">
+      <change afterPath="$PROJECT_DIR$/src/main/kitchen/Cook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Task.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Restaurant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Tablet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Tablet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kitchen/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kitchen/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673369856323</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Finished task 2. Added console &quot;UI&quot;. Added task 3.">
+      <created>1673381160300</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673381160300</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,6 +113,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Starting new project &quot;Restaurant menu&quot;. Added task 1." />
     <MESSAGE value="Added main classes and simple dish menu. Added task 2." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added main classes and simple dish menu. Added task 2." />
+    <MESSAGE value="Finished task 2. Added console &quot;UI&quot;. Added task 3." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished task 2. Added console &quot;UI&quot;. Added task 3." />
   </component>
 </project>

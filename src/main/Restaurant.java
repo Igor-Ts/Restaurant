@@ -1,9 +1,14 @@
 package main;
 
+import main.kitchen.Cook;
+
 public class Restaurant {
 
     public static void main(String[] args) throws Exception {
-        new Tablet(5).createOrder();
+        Cook cook = new Cook("Sasha");
+        Tablet tablet = new Tablet(5);
+        tablet.addObserver(cook);
+        tablet.createOrder();
 
     }
 }
