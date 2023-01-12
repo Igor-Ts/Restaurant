@@ -13,7 +13,7 @@ public enum Dish {
         for (int i = 0; i < values.length; i++) {
             dishes[i] = values[i].toString();
         }
-        return String.join(" ,", dishes);
+        return String.join(", ", dishes);
     }
 
 }

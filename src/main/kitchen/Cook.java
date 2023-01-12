@@ -17,18 +17,13 @@ public class Cook extends Observable implements Observer {
 
     @Override
     public String toString() {
-        return "Cook{" +
-                "name='" + name + '\'' +
-                '}';
+        return name;
     }
 
     @Override
     public void update(Observable o, Object arg) {
         ConsoleHelper.writeMessage("Start cooking - " + arg);
         setChanged();
-    }
-
-    public void addObserver(Observer observer) {
-        observers.add(observer);
+        notifyObservers(arg);
     }
 }
