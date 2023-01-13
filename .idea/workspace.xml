@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08ca9bb3-09b9-4478-b093-99cebd50fbed" name="Changes" comment="Finished task 4. Added waiter class . Added task 5.">
+    <list default="true" id="08ca9bb3-09b9-4478-b093-99cebd50fbed" name="Changes" comment="Finished task 5. Added dish duration and cook time. Added task 6.">
+      <change afterPath="$PROJECT_DIR$/src/main/ad/Advertisement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ad/AdvertisementManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ad/AdvertisementStorage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Task.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Task.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Tablet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Tablet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kitchen/Cook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kitchen/Cook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kitchen/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kitchen/Dish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kitchen/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kitchen/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673550519158</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Finished task 5. Added dish duration and cook time. Added task 6.">
+      <created>1673555123439</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673555123439</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,6 +138,7 @@
     <MESSAGE value="Finished task 2. Added console &quot;UI&quot;. Added task 3." />
     <MESSAGE value="Finished task 3. Simple Observer pattern realization. Added task 4." />
     <MESSAGE value="Finished task 4. Added waiter class . Added task 5." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished task 4. Added waiter class . Added task 5." />
+    <MESSAGE value="Finished task 5. Added dish duration and cook time. Added task 6." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished task 5. Added dish duration and cook time. Added task 6." />
   </component>
 </project>
