@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08ca9bb3-09b9-4478-b093-99cebd50fbed" name="Changes" comment="Finished task 5. Added dish duration and cook time. Added task 6.">
-      <change afterPath="$PROJECT_DIR$/src/main/ad/Advertisement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ad/AdvertisementManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ad/AdvertisementStorage.java" afterDir="false" />
+    <list default="true" id="08ca9bb3-09b9-4478-b093-99cebd50fbed" name="Changes" comment="Finished task 6. Added Advertisement package where 3 classes. one of it is singleton class. Added task 7.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Task.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Task.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ad/AdvertisementManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ad/AdvertisementManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ad/AdvertisementStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ad/AdvertisementStorage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673555123439</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Finished task 6. Added Advertisement package where 3 classes. one of it is singleton class. Added task 7.">
+      <created>1673633659326</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673633659326</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,6 +145,7 @@
     <MESSAGE value="Finished task 3. Simple Observer pattern realization. Added task 4." />
     <MESSAGE value="Finished task 4. Added waiter class . Added task 5." />
     <MESSAGE value="Finished task 5. Added dish duration and cook time. Added task 6." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished task 5. Added dish duration and cook time. Added task 6." />
+    <MESSAGE value="Finished task 6. Added Advertisement package where 3 classes. one of it is singleton class. Added task 7." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished task 6. Added Advertisement package where 3 classes. one of it is singleton class. Added task 7." />
   </component>
 </project>
