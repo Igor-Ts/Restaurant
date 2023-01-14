@@ -1,7 +1,5 @@
 package main.ad;
 
-import main.ConsoleHelper;
-
 public class AdvertisementManager {
 
     private final AdvertisementStorage storage = new AdvertisementStorage();
@@ -12,6 +10,8 @@ public class AdvertisementManager {
     }
 
     public void processVideos(){
-        ConsoleHelper.writeMessage("calling processVideos method");
+        if (storage.list().isEmpty()){
+            throw new NoVideoAvailableException();
+        }
     }
 }
