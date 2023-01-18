@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08ca9bb3-09b9-4478-b093-99cebd50fbed" name="Changes" comment="Finished task 8. Added simple realization to class AdvertisementManager. Added task 9.">
-      <change afterPath="$PROJECT_DIR$/src/main/ad/NoVideoAvailableException.java" afterDir="false" />
+    <list default="true" id="08ca9bb3-09b9-4478-b093-99cebd50fbed" name="Changes" comment="Finished task 9. Added NoVideoAvailableException and hit counter. Added task 10.">
+      <change afterPath="$PROJECT_DIR$/src/main/ad/AdvertisementSelection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Tablet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Tablet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Task.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ad/Advertisement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ad/Advertisement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ad/AdvertisementManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ad/AdvertisementManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ad/AdvertisementStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ad/AdvertisementStorage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673642353979</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Finished task 9. Added NoVideoAvailableException and hit counter. Added task 10.">
+      <created>1673707880870</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1673707880870</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -163,6 +171,7 @@
     <MESSAGE value="Finished task 6. Added Advertisement package where 3 classes. one of it is singleton class. Added task 7." />
     <MESSAGE value="Finished task 7. Added Advertisement videos and a few methods how to work with videos. one of it is singleton class. Added task 8." />
     <MESSAGE value="Finished task 8. Added simple realization to class AdvertisementManager. Added task 9." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished task 8. Added simple realization to class AdvertisementManager. Added task 9." />
+    <MESSAGE value="Finished task 9. Added NoVideoAvailableException and hit counter. Added task 10." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished task 9. Added NoVideoAvailableException and hit counter. Added task 10." />
   </component>
 </project>
