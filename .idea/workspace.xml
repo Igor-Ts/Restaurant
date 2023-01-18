@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08ca9bb3-09b9-4478-b093-99cebd50fbed" name="Changes" comment="Finished task 10. Added AdvertisementSelection class which sort video(used dynamic programming with recursion method) and show ads to visitor when they wait order. Added task 11.">
-      <change afterPath="$PROJECT_DIR$/src/main/statistic/StatisticManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/statistic/event/EventDataRow.java" afterDir="false" />
+    <list default="true" id="08ca9bb3-09b9-4478-b093-99cebd50fbed" name="Changes" comment="Finished task 11. Started creation statistic. Added task 12.">
+      <change afterPath="$PROJECT_DIR$/src/main/statistic/event/CookedOrderEventDataRow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/statistic/event/EventType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/statistic/event/NoAvailableVideoEventDataRow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/statistic/event/VideoSelectedEventDataRow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,9 +17,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
+        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -152,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674066675571</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Finished task 11. Started creation statistic. Added task 12.">
+      <created>1674068259558</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1674068259558</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,6 +187,7 @@
     <MESSAGE value="Finished task 8. Added simple realization to class AdvertisementManager. Added task 9." />
     <MESSAGE value="Finished task 9. Added NoVideoAvailableException and hit counter. Added task 10." />
     <MESSAGE value="Finished task 10. Added AdvertisementSelection class which sort video(used dynamic programming with recursion method) and show ads to visitor when they wait order. Added task 11." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished task 10. Added AdvertisementSelection class which sort video(used dynamic programming with recursion method) and show ads to visitor when they wait order. Added task 11." />
+    <MESSAGE value="Finished task 11. Started creation statistic. Added task 12." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished task 11. Started creation statistic. Added task 12." />
   </component>
 </project>
