@@ -446,3 +446,36 @@ First Video is displaying... 50, 277
 4. ¬ пакете statistic должен быть создан пакет event, а в нем интерфейс маркер EventDataRow.
 
 
+–есторан(12)
+” нас выдел€ютс€ несколько событий:
+*повар приготовил заказ
+*выбрали набор видео-роликов дл€ заказа
+*нет ни одного видео-ролика, который можно показать во врем€ приготовлени€ заказа
+
+Ёто посто€нные данные, поэтому дл€ их хранени€ подходит энам.
+
+1. ¬ пакете event создай enum EventType {COOKED_ORDER, SELECTED_VIDEOS, NO_AVAILABLE_VIDEO}
+
+2. ¬ пакете event создай три класса, соответствующих значени€м энама. ќни будут (должны) представл€ть собой событи€.
+ћы будем регистрировать их экземпл€ры в хранилище.
+»мена классов с параметрами дл€ конструкторов:
+2.1. CookedOrderEventDataRow(String tabletName, String cookName, int cookingTimeSeconds, List<Dish> cookingDishs)
+где - tabletName - им€ планшета
+cookName - им€ повара
+cookingTimeSeconds - врем€ приготовлени€ заказа в секундах
+cookingDishs - список блюд дл€ приготовлени€
+2.2. NoAvailableVideoEventDataRow(int totalDuration)
+totalDuration - врем€ приготовлени€ заказа в секундах
+2.3. VideoSelectedEventDataRow(List<Advertisement> optimalVideoSet, long amount, int totalDuration)
+optimalVideoSet - список видео-роликов, отобранных дл€ показа
+amount - сумма денег в копейках
+totalDuration - обща€ продолжительность показа отобранных рекламных роликов
+3. ¬ классы, созданные в п.2., добавьте поле Date currentDate, которое проинициализируй в конструкторе текущей датой.
+
+
+“ребовани€:
+1. ¬ пакете event должен быть создан enum EventType с элементами {COOKED_ORDER, SELECTED_VIDEOS, NO_AVAILABLE_VIDEO}.
+2. ¬ пакете event должен быть создан класс CookedOrderEventDataRow реализующий интерфейс EventDataRow с конструктором и пол€ми описанными в условии.
+3. ¬ пакете event должен быть создан класс NoAvailableVideoEventDataRow реализующий интерфейс EventDataRow с конструктором и пол€ми описанными в условии.
+4. ¬ пакете event должен быть создан класс VideoSelectedEventDataRow реализующий интерфейс EventDataRow с конструктором и пол€ми описанными в условии.
+
