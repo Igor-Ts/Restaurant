@@ -2,6 +2,8 @@ package main.kitchen;
 
 import main.ConsoleHelper;
 import main.Tablet;
+import main.statistic.StatisticManager;
+import main.statistic.event.CookedOrderEventDataRow;
 
 import java.io.IOException;
 import java.util.List;
@@ -27,6 +29,10 @@ public class Order {
 
     public boolean isEmpty() {
         return dishes.isEmpty();
+    }
+
+    public List<Dish> getDishes() {
+        return dishes;
     }
 
     @Override

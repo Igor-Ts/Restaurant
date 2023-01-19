@@ -6,6 +6,7 @@ import java.util.List;
 
 public class AdvertisementSelection {
     private final AdvertisementStorage storage = AdvertisementStorage.getInstance();
+    List<Advertisement> advertisements = new ArrayList<>();
 
     int[][] tempArray;
     int[] durationArray;
@@ -36,24 +37,14 @@ public class AdvertisementSelection {
             }
         }
         ArrayList<Integer> result = new ArrayList<>();
-        List<Advertisement> test = new ArrayList<>();
         traceResult(tempArray, durationArray, countVideos, timeSeconds, result);
 
         for (Integer integer : result) {
-            test.add(storage.list().get(integer));
+            advertisements.add(storage.list().get(integer));
         }
-        test.sort(Comparator.comparing(Advertisement::getAmountPerOneDisplaying)
+        advertisements.sort(Comparator.comparing(Advertisement::getAmountPerOneDisplaying)
                 .thenComparing((Advertisement::getAmountPerOneSec))
                 .reversed());
-        for (Advertisement adv : test) {
-            System.out.println(adv.getName() + " is displaying... "
-                    + adv.getAmountPerOneDisplaying() + ", "
-                    + adv.getAmountPerOneDisplaying() * 1000 / adv.getDuration());
-        }
-        for (Integer integer : result) {
-            storage.list().get(integer).revalidate();
-        }
-
     }
 
     private static void traceResult(int[][] A, int [] weights, int  j, int k, ArrayList <Integer> result) {
@@ -65,5 +56,25 @@ public class AdvertisementSelection {
             traceResult(A,weights, j - 1, k - weights[j - 1],result);
             result.add(0,j-1);
         }
+    }
+
+    public List <Advertisement> getAdvertisements() {
+        return advertisements;
+    }
+
+    public long getTotalPrice() {
+        long totalPrice = 0;
+        for (Advertisement adv: advertisements) {
+            totalPrice += adv.getAmountPerOneDisplaying();
+        }
+        return totalPrice;
+    }
+
+    public int getTotalDuration() {
+        int totalDuration = 0;
+        for (Advertisement adv: advertisements) {
+            totalDuration += adv.getDuration();
+        }
+        return totalDuration;
     }
 }
