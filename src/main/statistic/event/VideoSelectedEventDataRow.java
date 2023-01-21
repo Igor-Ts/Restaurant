@@ -33,4 +33,7 @@ public class VideoSelectedEventDataRow implements EventDataRow {
         return totalDuration;
     }
 
+    public long getAmount() {
+        return amount;
+    }
 }
