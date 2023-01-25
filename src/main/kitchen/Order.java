@@ -2,8 +2,6 @@ package main.kitchen;
 
 import main.ConsoleHelper;
 import main.Tablet;
-import main.statistic.StatisticManager;
-import main.statistic.event.CookedOrderEventDataRow;
 
 import java.io.IOException;
 import java.util.List;

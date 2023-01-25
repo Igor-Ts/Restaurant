@@ -25,7 +25,8 @@ public class AdvertisementManager {
         for (Advertisement adv : optimalSortedVideo) {
             ConsoleHelper.writeMessage(adv.getName() + " is displaying... "
                     + adv.getAmountPerOneDisplaying() + ", "
-                    + adv.getAmountPerOneDisplaying() * 1000 / adv.getDuration());
+                    + adv.getAmountPerOneSec());
+
             adv.revalidate();
         }
     }

@@ -10,12 +10,19 @@ public class AdvertisementSelection {
 
     int[][] tempArray;
     int[] durationArray;
-    int countVideos = storage.list().size();
+    int countVideos; //= storage.list().size();
 
     public void sortVideos(int timeSeconds) {
+        List<Advertisement> newList = new ArrayList<>(storage.list());
+        for (int i = 0; i < newList.size(); i++) {
+            if (newList.get(i).getHits() == 0){
+                newList.remove(i);
+            }
+        }
+        countVideos = newList.size();
         durationArray = new int[countVideos + 1];
         for (int i = 0; i < countVideos; i++) {
-            durationArray[i] = storage.list().get(i).getDuration();
+            durationArray[i] = newList.get(i).getDuration();
         }
 
         tempArray = new int[countVideos + 1][];
@@ -29,7 +36,7 @@ public class AdvertisementSelection {
                     tempArray[j][k] = 0;
                 } else {
                     if (k >= durationArray[j - 1]) {
-                        tempArray[j][k] = (int) Math.max(tempArray[j - 1][k], tempArray[j - 1][k - durationArray[j - 1]] + storage.list().get(j - 1).getAmountPerOneDisplaying());
+                        tempArray[j][k] = (int) Math.max(tempArray[j - 1][k], tempArray[j - 1][k - durationArray[j - 1]] + newList.get(j - 1).getAmountPerOneDisplaying());
                     } else {
                         tempArray[j][k] = tempArray[j - 1][k];
                     }
@@ -40,7 +47,7 @@ public class AdvertisementSelection {
         traceResult(tempArray, durationArray, countVideos, timeSeconds, result);
 
         for (Integer integer : result) {
-            advertisements.add(storage.list().get(integer));
+            advertisements.add(newList.get(integer));
         }
         advertisements.sort(Comparator.comparing(Advertisement::getAmountPerOneDisplaying)
                 .thenComparing((Advertisement::getAmountPerOneSec))

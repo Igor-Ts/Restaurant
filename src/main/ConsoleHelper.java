@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ConsoleHelper {
-    private static final BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+    private static BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
     public static void writeMessage(String message) {
         System.out.println(message);
@@ -37,5 +37,9 @@ public class ConsoleHelper {
             }
         }
         return dishList;
+    }
+
+    public static void reInit() {
+        bufferedReader = new BufferedReader(new InputStreamReader(System.in));
     }
 }

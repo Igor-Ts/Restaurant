@@ -13,7 +13,6 @@ public class Restaurant {
         tablet.addObserver(cook);
         cook.addObserver(waiter);
         tablet.createOrder();
-        tablet.createOrder();
         directorTablet.printActiveVideoSet();
         directorTablet.printArchivedVideoSet();
         directorTablet.printAdvertisementProfit();

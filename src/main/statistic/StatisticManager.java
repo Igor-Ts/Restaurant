@@ -30,15 +30,16 @@ public class StatisticManager {
     private Map<String, Long> advertisementProfitPerDay() {
         Map<String, Long> advDayProfit = new HashMap<>();
         List<EventDataRow> videoSelect = statisticStorage.getEventsByType(EventType.SELECTED_VIDEOS);
-
+        int i = 0;
         for (EventDataRow video: videoSelect) {
             VideoSelectedEventDataRow e = (VideoSelectedEventDataRow) video;
-            String getDate = sDF.format(videoSelect.get(0).getDate());
+            String getDate = sDF.format(videoSelect.get(i).getDate());
             if (advDayProfit.containsKey(getDate)){
                 advDayProfit.put(getDate, advDayProfit.get(getDate) + e.getAmount());
             } else {
                 advDayProfit.put(getDate,e.getAmount());
             }
+            i++;
         }
         return advDayProfit;
     }
@@ -55,14 +56,14 @@ public class StatisticManager {
         ConsoleHelper.writeMessage(String.format("Total - %.2f",totalForAll));
     }
 
-    private Map<String, TreeMap<String, Integer>> cookWorkPerDay() {
-        Map<String, TreeMap<String, Integer>> cookDayWork = new HashMap<>();
+    private Map<String, Map<String, Integer>> cookWorkPerDay() {
+        Map<String, Map<String, Integer>> cookDayWork = new HashMap<>();
         List<EventDataRow> cookedOrder = statisticStorage.getEventsByType(EventType.COOKED_ORDER);
 
         for (EventDataRow order: cookedOrder) {
             CookedOrderEventDataRow e = (CookedOrderEventDataRow) order;
             String date = sDF.format(e.getDate());
-            TreeMap<String, Integer> dailyCookLoad = cookDayWork.computeIfAbsent(date, k -> new TreeMap<>());
+            Map<String, Integer> dailyCookLoad = cookDayWork.computeIfAbsent(date, k -> new HashMap<>());
 
             String cookName = e.getCookName();
             int orderTime = e.getTime() / 60;
@@ -75,24 +76,16 @@ public class StatisticManager {
     }
 
     public void cookWorkTimeResult() {
-        Map<String, TreeMap<String, Integer>> cookResult = cookWorkPerDay();
-        TreeMap<String, Integer> cookWorkTime = new TreeMap<>();
+        NavigableMap<String, Map<String, Integer>> cookResult = new TreeMap<>(cookWorkPerDay()).descendingMap();
 
-        for (Map.Entry<String, TreeMap<String, Integer>> e: cookResult.entrySet()) {
+        for (Map.Entry<String, Map<String, Integer>> e: cookResult.entrySet()) {
             String date = e.getKey();
-            NavigableMap <String,Integer> deskMap = e.getValue().descendingMap();
+            Map <String,Integer> deskMap = new TreeMap<>(e.getValue());
+            ConsoleHelper.writeMessage(date);
             for (Map.Entry<String, Integer> cookTime: deskMap.entrySet()) {
                 String cookName = cookTime.getKey();
                 int cookTimeMin = cookTime.getValue();
-                if (cookWorkTime.containsKey(cookName)){
-                    cookWorkTime.put(cookName,(cookWorkTime.get(cookName) + cookTimeMin)) ;
-                } else {
-                    cookWorkTime.put(cookName, cookTimeMin);
-                }
-            }
-            ConsoleHelper.writeMessage(date);
-            for (Map.Entry<String, Integer> finalCookResult: cookWorkTime.entrySet()) {
-                ConsoleHelper.writeMessage(String.format("%s - %d min",finalCookResult.getKey(),finalCookResult.getValue()));
+                ConsoleHelper.writeMessage(String.format("%s - %d min",cookName,cookTimeMin));
             }
         }
         ConsoleHelper.writeMessage("");
