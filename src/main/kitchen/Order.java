@@ -29,6 +29,10 @@ public class Order {
         dishes = ConsoleHelper.getAllDishesForOrder();
     }
 
+    public Tablet getTablet() {
+        return tablet;
+    }
+
     public boolean isEmpty() {
         return dishes.isEmpty();
     }

@@ -21,12 +21,12 @@ public class Restaurant {
         cookEgor.addObserver(waiter);
         cookSasha.addObserver(waiter);
         List<Tablet> tablets = new ArrayList<>();
+        OrderManager orderManager = new OrderManager();
 
         for (int i = 1; i <= 5; i++) {
             Tablet tablet = new Tablet(i);
             tablets.add(tablet);
-            tablet.addObserver(cookSasha);
-            tablet.addObserver(cookEgor);
+            tablet.addObserver(orderManager);
         }
         RandomOrderGeneratorTask randomOrderGeneratorTask = new RandomOrderGeneratorTask(tablets, ORDER_CREATING_INTERVAL);
         Thread t = new Thread(randomOrderGeneratorTask);
