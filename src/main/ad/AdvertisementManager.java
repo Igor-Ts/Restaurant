@@ -19,8 +19,7 @@ public class AdvertisementManager {
             throw new NoVideoAvailableException();
         }
         AdvertisementSelection selection = new AdvertisementSelection();
-        selection.sortVideos(timeSeconds);
-        List<Advertisement> optimalSortedVideo = selection.getAdvertisements();
+        List<Advertisement> optimalSortedVideo = selection.sortVideos(timeSeconds);
         StatisticManager.getInstance().register(new VideoSelectedEventDataRow(optimalSortedVideo,selection.getTotalPrice(),selection.getTotalDuration()));
         for (Advertisement adv : optimalSortedVideo) {
             ConsoleHelper.writeMessage(adv.getName() + " is displaying... "

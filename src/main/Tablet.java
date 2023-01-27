@@ -3,6 +3,7 @@ package main;
 import main.ad.AdvertisementManager;
 import main.ad.NoVideoAvailableException;
 import main.kitchen.Order;
+import main.kitchen.TestOrder;
 
 import java.io.IOException;
 import java.util.Observable;
@@ -19,9 +20,18 @@ public class Tablet extends Observable {
 
     public Order createOrder() {
         Order order = null;
+            order = createOrderbyOrderType(order,false);
+        return order;
+    }
 
+    public void createTestOrder() {
+        TestOrder order = null;
+        createOrderbyOrderType(order, true);
+    }
+
+    private Order createOrderbyOrderType(Order order, boolean isAuto) {
         try {
-            order = new Order(this);
+            order = isAuto? new TestOrder(this): new Order(this);
             if (!order.isEmpty()){
                 ConsoleHelper.writeMessage(order.toString());
                 setChanged();
@@ -29,8 +39,6 @@ public class Tablet extends Observable {
                 AdvertisementManager advertisementManager = new AdvertisementManager(order.getTotalCookingTime()*60);
                 advertisementManager.processVideos();
             }
-
-
         } catch (IOException e) {
             logger.log(Level.SEVERE, "Console is unavailable.");
         } catch (NoVideoAvailableException e) {

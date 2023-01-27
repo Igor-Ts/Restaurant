@@ -14,7 +14,7 @@ public class Order {
 
     public Order(Tablet tablet) throws IOException {
         this.tablet = tablet;
-        dishes = ConsoleHelper.getAllDishesForOrder();
+        initDishes();
     }
 
     public int getTotalCookingTime() {
@@ -23,6 +23,10 @@ public class Order {
             cookingDuration += duration.getDuration();
         }
         return cookingDuration;
+    }
+
+    protected void initDishes() throws IOException {
+        dishes = ConsoleHelper.getAllDishesForOrder();
     }
 
     public boolean isEmpty() {

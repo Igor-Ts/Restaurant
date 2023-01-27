@@ -12,13 +12,16 @@ public class AdvertisementSelection {
     int[] durationArray;
     int countVideos; //= storage.list().size();
 
-    public void sortVideos(int timeSeconds) {
+    public List<Advertisement> sortVideos(int timeSeconds) {
         List<Advertisement> newList = new ArrayList<>(storage.list());
-        for (int i = 0; i < newList.size(); i++) {
-            if (newList.get(i).getHits() == 0){
+        for (int i = 0; i < newList.size();) {
+            if (newList.get(i).getHits() <= 0){
                 newList.remove(i);
+            } else {
+                i++;
             }
         }
+
         countVideos = newList.size();
         durationArray = new int[countVideos + 1];
         for (int i = 0; i < countVideos; i++) {
@@ -47,21 +50,22 @@ public class AdvertisementSelection {
         traceResult(tempArray, durationArray, countVideos, timeSeconds, result);
 
         for (Integer integer : result) {
-            advertisements.add(newList.get(integer));
+            advertisements.add(newList.get(integer-1));
         }
         advertisements.sort(Comparator.comparing(Advertisement::getAmountPerOneDisplaying)
                 .thenComparing((Advertisement::getAmountPerOneSec))
                 .reversed());
+        return advertisements;
     }
 
-    private static void traceResult(int[][] A, int [] weights, int  j, int k, ArrayList <Integer> result) {
+    private void traceResult(int[][] A, int [] weights, int  j, int k, ArrayList <Integer> result) {
         if (A[j][k] == 0) {
             return;
         } if (A[j - 1][k] == A[j][k]){
             traceResult(A, weights,j - 1,k,result);
         } else  {
             traceResult(A,weights, j - 1, k - weights[j - 1],result);
-            result.add(0,j-1);
+            result.add(0,j);
         }
     }
 
