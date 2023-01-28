@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08ca9bb3-09b9-4478-b093-99cebd50fbed" name="Changes" comment="Finished task 20. Started bug fixing. Was created new observer class which will manage orders. In main class was changed dependency logic. Added task 21.">
+    <list default="true" id="08ca9bb3-09b9-4478-b093-99cebd50fbed" name="Changes" comment="Finished task 21. Created daemon thread.This daemon check order queue is empty or not. If not gives this order to free cook. Added task 22.">
       <change afterPath="$PROJECT_DIR$/src/test/DirectorTabletTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/OrderCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Task.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Task.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/OrderManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/OrderManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/RandomOrderGeneratorTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/RandomOrderGeneratorTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/OrderManager.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Tablet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Tablet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kitchen/Cook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kitchen/Cook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/statistic/StatisticManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/statistic/StatisticManager.java" afterDir="false" />
     </list>
@@ -243,8 +243,26 @@
       <option name="project" value="LOCAL" />
       <updated>1674848956897</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Finished task 21. Created daemon thread.This daemon check order queue is empty or not. If not gives this order to free cook. Added task 22.">
+      <created>1674921177066</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1674921177066</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -280,7 +298,8 @@
     <MESSAGE value="Finished task 19.Created new cook, added all dependency(Observer-Observable), but have one problem, two cooks cooked one order together. Added task 20." />
     <MESSAGE value="Finished task 19.Created new cook, added all dependency(Observer-Observable), but have one problem, two cooks cook one order together. Added task 20." />
     <MESSAGE value="Finished task 20. Started bug fixing. Was created new observer class which will manage orders. In main class was changed dependency logic. Added task 21." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished task 20. Started bug fixing. Was created new observer class which will manage orders. In main class was changed dependency logic. Added task 21." />
+    <MESSAGE value="Finished task 21. Created daemon thread.This daemon check order queue is empty or not. If not gives this order to free cook. Added task 22." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished task 21. Created daemon thread.This daemon check order queue is empty or not. If not gives this order to free cook. Added task 22." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -13,9 +13,6 @@ import java.util.*;
 public class StatisticManager {
     private static StatisticManager managerInstance = new StatisticManager();
     private StatisticStorage statisticStorage = new StatisticStorage();
-    Set<Cook> cooks = new HashSet<>();
-
-
 
     SimpleDateFormat sDF = new SimpleDateFormat("dd-MMM-yyyy",Locale.ENGLISH);
     public static StatisticManager getInstance() {
@@ -24,10 +21,6 @@ public class StatisticManager {
 
     public void register(EventDataRow data){
         statisticStorage.put(data);
-    }
-
-    public void register(Cook cook){
-        cooks.add(cook);
     }
 
     private Map<String, Long> advertisementProfitPerDay() {
@@ -112,7 +105,4 @@ public class StatisticManager {
         }
     }
 
-    public Set<Cook> getCooks() {
-        return cooks;
-    }
 }

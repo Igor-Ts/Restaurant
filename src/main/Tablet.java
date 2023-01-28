@@ -6,12 +6,13 @@ import main.kitchen.Order;
 import main.kitchen.TestOrder;
 
 import java.io.IOException;
-import java.util.Observable;
+import java.util.concurrent.LinkedBlockingQueue;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class Tablet extends Observable {
+public class Tablet {
     final int number;
+    private LinkedBlockingQueue<Order> queue;
     static Logger logger = Logger.getLogger(Tablet.class.getName());
 
     public Tablet(int number) {
@@ -20,22 +21,21 @@ public class Tablet extends Observable {
 
     public Order createOrder() {
         Order order = null;
-            order = createOrderbyOrderType(order,false);
+            order = createOrderByOrderType(order,false);
         return order;
     }
 
     public void createTestOrder() {
         TestOrder order = null;
-        createOrderbyOrderType(order, true);
+        createOrderByOrderType(order, true);
     }
 
-    private Order createOrderbyOrderType(Order order, boolean isAuto) {
+    private Order createOrderByOrderType(Order order, boolean isAuto) {
         try {
             order = isAuto? new TestOrder(this): new Order(this);
             if (!order.isEmpty()){
                 ConsoleHelper.writeMessage(order.toString());
-                setChanged();
-                notifyObservers(order);
+                queue.add(order);
                 AdvertisementManager advertisementManager = new AdvertisementManager(order.getTotalCookingTime()*60);
                 advertisementManager.processVideos();
             }
@@ -45,6 +45,10 @@ public class Tablet extends Observable {
             logger.log(Level.INFO, "No video is available for the order " + order);
         }
         return order;
+    }
+
+    public void setOrderQueue(LinkedBlockingQueue<Order> queue) {
+        this.queue = queue;
     }
 
     @Override
