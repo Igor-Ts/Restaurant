@@ -14,8 +14,8 @@ public class RandomOrderGeneratorTask implements Runnable {
     @Override
     public void run() {
 
-        while (true){
-            Tablet activeTablet = tabletList.get((int) (Math.random()*3));
+        while (!Thread.currentThread().isInterrupted()){
+            Tablet activeTablet = tabletList.get((int) (Math.random()* tabletList.size()));
             activeTablet.createTestOrder();
             try {
                 Thread.sleep(interval);

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08ca9bb3-09b9-4478-b093-99cebd50fbed" name="Changes" comment="Finished task 19.Created new cook, added all dependency(Observer-Observable), but have one problem, two cooks cook one order together. Added task 20.">
-      <change afterPath="$PROJECT_DIR$/src/main/OrderManager.java" afterDir="false" />
+    <list default="true" id="08ca9bb3-09b9-4478-b093-99cebd50fbed" name="Changes" comment="Finished task 20. Started bug fixing. Was created new observer class which will manage orders. In main class was changed dependency logic. Added task 21.">
       <change afterPath="$PROJECT_DIR$/src/test/DirectorTabletTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/OrderCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Task.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Task.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/OrderManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/OrderManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/RandomOrderGeneratorTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/RandomOrderGeneratorTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Restaurant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kitchen/Cook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kitchen/Cook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kitchen/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kitchen/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/statistic/StatisticManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/statistic/StatisticManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674846828313</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Finished task 20. Started bug fixing. Was created new observer class which will manage orders. In main class was changed dependency logic. Added task 21.">
+      <created>1674848956897</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1674848956897</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -271,7 +279,8 @@
     <MESSAGE value="Finished task 18.In class AdvertisementSelection was fixed logic how to show ads video, added many tablets and order creation randomizer. Added task 19." />
     <MESSAGE value="Finished task 19.Created new cook, added all dependency(Observer-Observable), but have one problem, two cooks cooked one order together. Added task 20." />
     <MESSAGE value="Finished task 19.Created new cook, added all dependency(Observer-Observable), but have one problem, two cooks cook one order together. Added task 20." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished task 19.Created new cook, added all dependency(Observer-Observable), but have one problem, two cooks cook one order together. Added task 20." />
+    <MESSAGE value="Finished task 20. Started bug fixing. Was created new observer class which will manage orders. In main class was changed dependency logic. Added task 21." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished task 20. Started bug fixing. Was created new observer class which will manage orders. In main class was changed dependency logic. Added task 21." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

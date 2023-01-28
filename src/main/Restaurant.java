@@ -13,13 +13,15 @@ public class Restaurant {
     public static void main(String[] args) throws Exception {
         Cook cookSasha = new Cook("Sasha");
         Cook cookEgor = new Cook("Egor");
+
         StatisticManager statisticManager = StatisticManager.getInstance();
         statisticManager.register(cookSasha);
         statisticManager.register(cookEgor);
+
         Waiter waiter = new Waiter();
-        DirectorTablet directorTablet = new DirectorTablet();
         cookEgor.addObserver(waiter);
         cookSasha.addObserver(waiter);
+
         List<Tablet> tablets = new ArrayList<>();
         OrderManager orderManager = new OrderManager();
 
@@ -29,15 +31,16 @@ public class Restaurant {
             tablet.addObserver(orderManager);
         }
         RandomOrderGeneratorTask randomOrderGeneratorTask = new RandomOrderGeneratorTask(tablets, ORDER_CREATING_INTERVAL);
-        Thread t = new Thread(randomOrderGeneratorTask);
-        t.start();
+        Thread thread = new Thread(randomOrderGeneratorTask);
+        thread.start();
 
-        Thread.sleep(3000);
-        t.interrupt();
-        directorTablet.printActiveVideoSet();
+        Thread.sleep(1000);
+        thread.interrupt();
+        DirectorTablet directorTablet = new DirectorTablet();
+        /*directorTablet.printActiveVideoSet();
         directorTablet.printArchivedVideoSet();
         directorTablet.printAdvertisementProfit();
-        directorTablet.printCookWorkLoading();
+        directorTablet.printCookWorkLoading();*/
 
 
     }

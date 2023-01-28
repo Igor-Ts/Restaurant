@@ -14,6 +14,9 @@ public class StatisticManager {
     private static StatisticManager managerInstance = new StatisticManager();
     private StatisticStorage statisticStorage = new StatisticStorage();
     Set<Cook> cooks = new HashSet<>();
+
+
+
     SimpleDateFormat sDF = new SimpleDateFormat("dd-MMM-yyyy",Locale.ENGLISH);
     public static StatisticManager getInstance() {
         return managerInstance;
@@ -109,4 +112,7 @@ public class StatisticManager {
         }
     }
 
+    public Set<Cook> getCooks() {
+        return cooks;
+    }
 }
